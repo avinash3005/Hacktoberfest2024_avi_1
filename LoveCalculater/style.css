@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,600&display=swap");
+
+@font-face {
+  font-family: "Cocogoose";
+  src: url("Cocogoose.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100%;
+  background: #fb50ce;
+  background: -moz-linear-gradient(45deg,
+      #fb50ce 50%,
+      #ff7376 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg,
+      #fb50ce 50%,
+      #ff7376 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg,
+      #fb50ce 50%,
+      #ff7376 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#05abe0', endColorstr='#87e0fd', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+  background-repeat: no-repeat;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: #ffffff;
+  transition: 0.3s;
+  font-size: 18px;
+}
+
+h1 {
+  color: #fff;
+  font-size: 4rem;
+  font-family: "Cocogoose";
+}
+
+/* Wrapper Section */
+
+.wrapper {
+  height: 100%;
+  color: #fff;
+  padding: 50px;
+}
+
+.maincontent {
+  display: flex;
+  margin: 100px auto 20px auto;
+  text-align: center;
+  flex-flow: row;
+  justify-content: center;
+}
+
+label {
+  font-weight: 600;
+}
+
+.maincontent input {
+  width: 350px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid #ffffff;
+  border-radius: 50px;
+  color: #ffffff;
+  outline: none;
+  padding: 20px;
+  font-size: 20px;
+  justify-content: space-between;
+  margin: 10px;
+  text-align: center;
+  text-transform: capitalize;
+  box-shadow: 0 10px 23px 10px #00000020;
+}
+
+.maincontent input:focus {
+  width: 450px;
+  background-color: #fff;
+  color: #c602d4;
+  transition: 0.3s;
+  font-weight: 700;
+}
+
+.maincontent input:valid {
+  background-color: #fff;
+  color: #c602d4;
+  transition: 0.3s;
+  font-weight: 700;
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 18px;
+  text-align: center;
+}
+
+button {
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 50px;
+  color: #ff4136;
+  padding: 15px 30px;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s;
+  font-weight: 600;
+  box-shadow: 0 10px 23px 10px #00000020;
+}
+
+button:hover {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.result {
+  width: 50%;
+  margin: 100px auto;
+}
+
+.result h1 {
+  font-family: "Montserrat", sans-serif;
+  padding: 10px;
+}
+
+.divider {
+  width: 200px;
+  height: 2px;
+  background-color: #fff;
+  text-align: center;
+  margin: 10px auto;
+}
+
+#loveinfo {
+  line-height: 1.5;
+}
+
+/* End of wrapper section */
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+}
+
+/* Responsive Codes */
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  body {
+    font-size: 16px;
+  }
+
+  .wrapper {
+    padding: 50px 10px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .maincontent {
+    margin: 50px auto 20px auto;
+    display: grid;
+  }
+
+  .maincontent input {
+    margin: 20px 0;
+    width: 90%;
+    height: 30px;
+  }
+
+  .maincontent input:focus {
+    width: 100%;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 15px 5%;
+  }
+
+  .result {
+    width: 90%;
+    margin: 100px auto;
+  }
+
+  .divider {
+    width: 30%;
+  }
+
+  #score {
+    font-size: 2rem;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .wrapper {
+    padding: 50px 10px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .maincontent {
+    margin: 50px auto 20px auto;
+    display: grid;
+  }
+
+  .maincontent input {
+    margin: 20px 0;
+    height: 30px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 15px 5%;
+  }
+
+  .result {
+    width: 90%;
+    margin: 100px auto;
+  }
+
+  .divider {
+    width: 30%;
+  }
+
+  #score {
+    font-size: 2rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .wrapper {
+    padding: 50px 10px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .maincontent {
+    display: flex;
+  }
+
+  .maincontent input {
+    width: 300px;
+    margin: 20px;
+  }
+
+  .maincontent input:focus {
+    width: 350px;
+  }
+
+  button {
+    padding: 15px 5%;
+  }
+
+  .result {
+    width: 90%;
+    margin: 100px auto;
+  }
+
+  .divider {
+    width: 30%;
+  }
+
+  #score {
+    font-size: 2rem;
+  }
+}
+
+
+/* Optional: Add some styling to the icon */
+.instagram-icon {
+  color: #C13584;
+  /* Instagram's brand color */
+  margin-right: 5px;
+  /* Add some space between the icon and the text */
+}

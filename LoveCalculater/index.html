@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css" />
+  <title>Love Calculator</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="heading">
+      <h1>Love ♥ Calculator</h1>
+      <h4>Get Your Own Love Result Instantly*</h4>
+    </div>
+
+    <div class="maincontent">
+      <div>
+        <!-- Your name Inputfield -->
+        <label for="yourname">*Your Name</label><br />
+        <input type="text" id="yourname" placeholder="Enter Your Name" spellcheck="false" maxlength="30" required />
+      </div>
+      <div>
+        <!-- His/Her name Inputfield -->
+        <label for="theirname">*His/Her Name</label><br />
+        <input type="text" id="theirname" placeholder="Enter His/Her Name" spellcheck="false" maxlength="30" required />
+      </div>
+    </div>
+    <button type="submit">❤ CALCULATE ❤</button>
+
+    <div class="result">
+      <h2>Result</h2>
+      <div class="divider"></div>
+      <p id="yourlovescoreis"></p>
+      <h1 id="score"></h1>
+      <p id="loveinfo"></p>
+      <p id="reload" style="
+            cursor: pointer;
+            display: none;
+            margin-top: 30px;
+            font-weight: 700;
+          " onClick="window.location.reload();">
+        ↺ Re Calculate
+      <p>* Fun Purpus Only</p>
+      </p>
+    </div>
+  </div>
+  <div class="footer">
+    <p style="color: #000">
+      Made With <span style="color: #ff4136; font-size: 25px">❤</span> By
+      <a style="text-decoration: none; font-weight: bold; color: #ff4136" target="_blank"
+        href="https://github.com/arindamsaha2022">ARINDAM SAHA</a>
+    <p><a href="https://www.instagram.com/the_arindam/" target="_blank"><i class="fab fa-instagram instagram-icon"></i>
+        The_arindam</a></p>
+    </p>
+  </div>
+
+  <script type="text/javascript"></script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
