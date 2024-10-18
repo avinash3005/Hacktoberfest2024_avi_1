@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Matrix Multiplication</title>
+  <style>
+    /* Styling the body */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Container styling */
+    .container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    /* Input field styling */
+    input {
+      width: 40px;
+      padding: 5px;
+      margin: 5px;
+      text-align: center;
+    }
+
+    .matrix {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
+
+    .matrix-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* Result styling */
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      color: green;
+    }
+
+    /* Button styling */
+    button {
+      background-color: #28a745;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Matrix Multiplication</h1>
+    
+    <!-- Input fields for Matrix A -->
+    <div class="matrix" id="matrixA">
+      <div class="matrix-column">
+        <input type="number" id="a00" placeholder="A00">
+        <input type="number" id="a10" placeholder="A10">
+      </div>
+      <div class="matrix-column">
+        <input type="number" id="a01" placeholder="A01">
+        <input type="number" id="a11" placeholder="A11">
+      </div>
+    </div>
+
+    <!-- Input fields for Matrix B -->
+    <div class="matrix" id="matrixB">
+      <div class="matrix-column">
+        <input type="number" id="b00" placeholder="B00">
+        <input type="number" id="b10" placeholder="B10">
+      </div>
+      <div class="matrix-column">
+        <input type="number" id="b01" placeholder="B01">
+        <input type="number" id="b11" placeholder="B11">
+      </div>
+    </div>
+
+    <!-- Button to trigger matrix multiplication -->
+    <button onclick="multiplyMatrices()">Multiply Matrices</button>
+
+    <!-- Display the result -->
+    <div id="result"></div>
+  </div>
+
+  <script>
+    /**
+     * This function retrieves values from the input fields,
+     * performs matrix multiplication, and displays the result.
+     * Matrix A and Matrix B are 2x2 matrices, and the result will also be a 2x2 matrix.
+     */
+    function multiplyMatrices() {
+      // Get values from matrix A
+      const a00 = parseFloat(document.getElementById('a00').value);
+      const a01 = parseFloat(document.getElementById('a01').value);
+      const a10 = parseFloat(document.getElementById('a10').value);
+      const a11 = parseFloat(document.getElementById('a11').value);
+
+      // Get values from matrix B
+      const b00 = parseFloat(document.getElementById('b00').value);
+      const b01 = parseFloat(document.getElementById('b01').value);
+      const b10 = parseFloat(document.getElementById('b10').value);
+      const b11 = parseFloat(document.getElementById('b11').value);
+
+      // Perform matrix multiplication: C = A * B
+      const c00 = a00 * b00 + a01 * b10;
+      const c01 = a00 * b01 + a01 * b11;
+      const c10 = a10 * b00 + a11 * b10;
+      const c11 = a10 * b01 + a11 * b11;
+
+      // Display the result
+      const resultDiv = document.getElementById('result');
+      resultDiv.innerHTML = `
+        Result:
+        <br> [ ${c00.toFixed(2)}  ${c01.toFixed(2)} ] 
+        <br> [ ${c10.toFixed(2)}  ${c11.toFixed(2)} ]
+      `;
+    }
+  </script>
+</body>
+</html>
