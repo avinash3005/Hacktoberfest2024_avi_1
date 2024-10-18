@@ -39,8 +39,6 @@ Before you begin, ensure you have the following installed on your machine:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/Hacktoberfest2024_avi_1/ChatDB-LLM-Assistant
-/chatbot_project.git
 cd chatbot_project
 ```
 
