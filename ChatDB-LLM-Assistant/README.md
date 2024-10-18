@@ -1,7 +1,5 @@
 
----
-
-# Chatbot Project
+# Chatbot with Persistent Database Storage for Chat History
 
 This repository contains a chatbot application that interacts with users using an LLM (Large Language Model) service. The chatbot can store chat histories in a MySQL database and retrieve responses from various LLM services like Together and Groq. The project is modular and divided into separate components for easy maintenance, scalability, and future development.
 
@@ -104,18 +102,10 @@ chatbot_project/
 - **`chatbot.py`**: Core chatbot functionality, including handling conversation history and managing chat state.
 - **`main.py`**: The entry point that integrates everything and runs the chatbot.
 
-## Contributing
-
-If you'd like to contribute to this project, feel free to fork the repository and submit a pull request. Here are some ways you can contribute:
-
-- Fix bugs or suggest new features.
-- Improve performance (e.g., caching, optimization).
-- Add support for more LLM services.
-- Enhance the database design or chatbot logic.
 
 ## License
 
 This project is licensed under the MIT License. See the `LICENSE` file for more details.
 
----
+
 
