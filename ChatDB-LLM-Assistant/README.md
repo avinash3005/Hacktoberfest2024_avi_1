@@ -1,6 +1,4 @@
-Yes, including project details in the `README.md` file is essential, as it serves as the first point of reference for anyone visiting your GitHub repository. A good `README.md` typically contains an introduction, project setup instructions, usage guidelines, and more. Here's a template for your project that you can follow:
 
----
 
 # LLM Chatbot with MySQL Integration
 
@@ -34,14 +32,11 @@ This project implements a conversational chatbot using large language models (LL
 ## Installation
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
-   ```
+   
 
 2. Install dependencies:
    ```bash
-   pip install -r requirements.txt
+   pip3 install -r requirements.txt
    ```
 
 3. Set up your environment variables:
