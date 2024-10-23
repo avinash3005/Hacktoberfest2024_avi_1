@@ -1,0 +1,82 @@
+#include <iostream>
+#include <vector>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+void displayWord(const string& word, const vector<bool>& guessed) {
+    for (size_t i = 0; i < word.length(); i++) {
+        if (guessed[i]) {
+            cout << word[i] << " ";
+        } else {
+            cout << "_ ";
+        }
+    }
+    cout << endl;
+}
+
+bool isWordGuessed(const vector<bool>& guessed) {
+    for (bool letterGuessed : guessed) {
+        if (!letterGuessed) {
+            return false;
+        }
+    }
+    return true;
+}
+
+char getUserGuess() {
+    char guess;
+    cout << "Enter a letter: ";
+    cin >> guess;
+    return tolower(guess);  
+}
+
+bool processGuess(const string& word, vector<bool>& guessed, char guess) {
+    bool correct = false;
+    for (size_t i = 0; i < word.length(); i++) {
+        if (word[i] == guess && !guessed[i]) {
+            guessed[i] = true;
+            correct = true;
+        }
+    }
+    return correct;
+}
+
+int main() {
+    vector<string> wordList = {"computer", "hangman", "programming", "fantasy", "developer", "algorithm"};
+    
+   
+    srand(time(0));
+    string word = wordList[rand() % wordList.size()];
+    
+    vector<bool> guessed(word.length(), false); 
+    int maxAttempts = 6;
+    int incorrectGuesses = 0;
+    
+    cout << "Welcome to Hangman!" << endl;
+    cout << "You have " << maxAttempts << " attempts to guess the word." << endl;
+
+    while (incorrectGuesses < maxAttempts) {
+        displayWord(word, guessed);
+
+        char guess = getUserGuess();
+        if (processGuess(word, guessed, guess)) {
+            cout << "Good guess!" << endl;
+        } else {
+            incorrectGuesses++;
+            cout << "Incorrect! Attempts remaining: " << (maxAttempts - incorrectGuesses) << endl;
+        }
+
+        if (isWordGuessed(guessed)) {
+            cout << "Congratulations! You guessed the word: " << word << endl;
+            break;
+        }
+    }
+
+    if (!isWordGuessed(guessed)) {
+        cout << "Game over! The word was: " << word << endl;
+    }
+
+    return 0;
+}
